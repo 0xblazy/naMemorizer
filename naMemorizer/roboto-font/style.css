@@ -1,0 +1,94 @@
+@font-face {
+font-family: 'Roboto Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Regular'), url('Roboto-Regular.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Italic'), url('Roboto-Italic.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Thin Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Thin Regular'), url('Roboto-Thin.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Light Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Light Regular'), url('Roboto-Light.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Medium Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Medium Regular'), url('Roboto-Medium.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Black Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Black Regular'), url('Roboto-Black.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Thin Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Thin Italic'), url('Roboto-ThinItalic.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Light Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Light Italic'), url('Roboto-LightItalic.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Medium Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Medium Italic'), url('Roboto-MediumItalic.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Bold'), url('Roboto-Bold.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Bold Italic'), url('Roboto-BoldItalic.ttf') format('ttf');
+}
+
+
+@font-face {
+font-family: 'Roboto Black Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Roboto Black Italic'), url('Roboto-BlackItalic.ttf') format('ttf');
+}

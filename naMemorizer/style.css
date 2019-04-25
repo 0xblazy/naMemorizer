@@ -1,0 +1,421 @@
+@import url(product-sans-font/style.css);
+@import url(roboto-font/style.css);
+
+* {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0; 
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 auto;
+
+    width: 1280px;
+    height: 100%;
+
+    background: rgb(246, 246, 246);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 12px;
+    padding: 12px;
+    
+    width: 1256px;
+
+    border-radius: 6px 12px;
+
+    background: rgb(212, 212, 212);
+}
+
+input {
+    padding: 6px;
+    margin: 6px;
+
+    width: 156px;
+
+    border: none;
+    border-radius: 3px 6px;
+
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12pt;
+
+    color: rgb(32, 32, 32);
+
+    background: rgb(246, 246, 246);
+
+    transition: all .5s;
+}
+
+input::placeholder {
+    color: rgb(212, 212, 212);
+    opacity: 1;
+
+    transition: all .5s;
+}
+
+input:hover {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo du site */
+.header-img {
+    border-radius: 4px 8px;
+
+    background: rgb(147, 154, 144);
+}
+
+.header-img img {
+    display: block;
+    margin: 12px;
+}
+
+/* Menu */
+.menu {
+    text-align: center;
+    list-style: none;
+
+    height: 64px;
+
+    font-size: 18pt;
+    font-family: Product Sans Medium Regular;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+
+    margin: 0 3px;
+    padding: 0 20px;
+
+    line-height: 64px;
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+
+    border-radius: 4px 8px;
+    overflow: hidden;
+
+    transform: translateY(0);
+
+    background: rgb(147, 154, 144);
+
+    transition: all .5s;
+}
+
+.menu a:before {
+    position: absolute;
+    visibility: hidden;
+    content: '';
+
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(0);
+
+    background: rgb(0, 124, 187);
+
+    transition: all .3s;
+}
+
+.menu a:hover {
+	color: rgb(0, 124, 187);
+    
+    transform: translateY(-4px);
+    
+    transition: transform .5s;
+}
+
+.menu a:hover:before {
+    visibility: visible;
+    
+    transform: scaleX(1);
+}
+
+/* Page selectionnee */
+.selected a {
+    color: rgb(0, 124, 187);
+}
+
+.selected a:before {
+    position: absolute;
+    visibility: visible;
+    content: '';
+
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(1);
+
+    background: rgb(0, 124, 187);
+
+    transition: all .3s;
+}
+
+/* Bloc lorsque l'utilisateur n'est pas connecte */
+.not_connected {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    height: 100%;
+}
+
+/* Boutons */
+.button , .contenu .button {
+    display: inline-block;
+    cursor: pointer;
+
+    border: none;
+
+    padding: 0 15px;
+
+    line-height: 48px;
+
+    text-decoration: none;
+    text-align: center;
+    font-family: Product Sans Medium Regular;
+    font-size: 16px;
+    color: rgb(246, 246, 246);
+
+    border-radius: 4px 8px;
+    overflow: hidden;
+
+    transform: translateY(0);
+
+    background: rgb(147, 154, 144);
+
+    transition: all .5s;
+}
+
+div.button, .contenu div.button {
+    padding: 0;
+}
+
+.button a {
+    display: block;
+
+    padding: 0 15px;
+
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+    
+    transition: all .5s;
+}
+
+.button:before {
+    position: absolute;
+    visibility: hidden;
+    content: '';
+
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(0);
+
+    background: rgb(0, 124, 187);
+
+    transition: all .3s;
+}
+
+.button:hover {
+	color: rgb(0, 124, 187);
+    
+    transform: translateY(-3px);
+    
+    transition: transform .5s;
+}
+
+.button a:hover {
+    color: rgb(0, 124, 187);
+}
+
+.button:hover:before {
+    visibility: visible;
+    
+    transform: scaleX(1);
+}
+
+.delete {
+    background: rgb(228, 48, 64) !important;
+}
+
+.delete:hover {
+    color: rgb(147, 154, 144) !important;
+}
+
+.delete:before {
+    background: rgb(147, 154, 144) !important;
+}
+
+/* Contenu */
+.contenu {
+    flex-grow: 1;
+
+    margin: 12px;
+    margin-top: 0;
+    padding: 12px;
+
+    width: 1256px;
+
+    text-align: center;
+
+    border-radius: 6px 12px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+
+    background: rgb(212, 212, 212);
+}
+
+.contenu div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 12px;
+
+    border-radius: 4px 8px;
+
+    background: rgb(246, 246, 246);
+}
+
+.contenu h2 {
+    padding-bottom: 12px;
+
+    text-align: center;
+    font-weight: normal;
+    font-family: Product Sans Bold;
+    font-size: 22pt;
+    color: rgb(0, 124, 187);
+}
+
+.contenu h3 {
+    padding: 12px;
+    padding-bottom: 0;
+    
+    text-align: center;
+    font-weight: normal;
+    font-family: Product Sans Medium Regular;
+    font-size: 18pt;
+    color: rgb(0, 124, 187);
+}
+
+.contenu p {
+    max-width: 800px;
+
+    padding: 12px;
+
+    text-align: center;
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12pt;
+    color: rgb(32, 32, 32);
+}
+
+p.amusez_vous {
+    color: rgb(0, 124, 187);
+
+    font-family: Product Sans Medium Regular;
+    font-size: 14pt;
+}
+
+/* Formulaires */
+.contenu form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 12px;
+
+    max-width: 400px;
+
+    border-radius: 4px 8px;
+
+    background: rgb(212, 212, 212);
+}
+
+.contenu form h2 {
+    align-self: center;
+}
+
+.contenu form p {
+    padding: 6px 0;
+}
+
+.contenu form p:last-of-type {
+    padding-bottom: 12px;
+}
+
+.contenu form label {
+    padding: 0 6px;
+}
+
+.contenu input {
+    margin: 0;
+}
+
+.contenu form .button {
+    align-self: center;
+}
+
+/* Page de gestion */
+div.gestion {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    max-width: 800px;
+    min-height: 618px;
+}
+
+/* Pied de page */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 6px;
+
+    width: 1256px;
+    bottom: 0;
+    
+    border-radius: 6px 12px 0px 0px;
+
+    background: rgb(212, 212, 212);
+}
+
+footer p {
+    padding: 12px;
+
+    font-family: Roboto Regular, sans-serif;
+    font-size: 11pt;
+    color: rgb(32, 32, 32);
+}
+
+footer img {
+    margin: 12px;
+}
