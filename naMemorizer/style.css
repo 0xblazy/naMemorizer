@@ -209,6 +209,7 @@ input:hover {
 }
 
 div.button, .contenu div.button {
+    flex-grow: 0;
     padding: 0;
 }
 
@@ -272,6 +273,11 @@ div.button, .contenu div.button {
 
 /* Contenu */
 .contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+
     flex-grow: 1;
 
     margin: 12px;
@@ -292,6 +298,8 @@ div.button, .contenu div.button {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    flex-grow: 1;
 
     padding: 12px;
 
@@ -386,7 +394,6 @@ div.gestion {
     flex-wrap: wrap;
 
     max-width: 800px;
-    min-height: 618px;
 }
 
 /* Pied de page */
@@ -418,4 +425,6 @@ footer p {
 
 footer img {
     margin: 12px;
+
+    height: 54px;
 }
