@@ -386,6 +386,46 @@ p.amusez_vous {
     align-self: center;
 }
 
+.imageupload {
+    align-self: center;
+    padding: 0;
+}
+
+.imageupload input {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.imageupload label {
+    display: block;
+}
+
+.imageupload img,  .imageupload img[alt] {
+    display: block;
+
+    width: 240px;
+    height: 320px;
+    border-radius: 3px 6px;
+
+    background: rgb(246, 246, 246);
+
+    transition: box-shadow .5s;
+}
+
+.imageupload img[alt] {
+    padding: 6px;
+}
+
+.imageupload img:hover {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
 /* Page de gestion */
 div.gestion {
     flex-direction: row;
