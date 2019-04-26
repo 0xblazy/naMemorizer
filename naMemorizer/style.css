@@ -394,6 +394,7 @@ div.gestion {
     flex-wrap: wrap;
 
     max-width: 800px;
+    min-height: 620px;
 }
 
 /* Pied de page */
