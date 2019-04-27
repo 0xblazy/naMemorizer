@@ -5,36 +5,19 @@
         <meta charset="utf-8"/>
         <link rel="icon" type="image/png" href="img/favicon.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            function readUrl(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-        
-                    reader.onload = function(e) {
-                        $('#imageshow')
-                            .attr('src', e.target.result);
-                    };
-        
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-        </script>
     </head>
     <body>
         <header>
             <div class="header-img">
                 <img src="img/logo.png" alt="Logo Name Memorizer"/>
             </div>
-            <nav>
-                <ul class="menu"><!--
-                --><li><a href="index.html">Accueil</a></li><!--
-                --><li class="selected"><a href="game.html">Jeu</a></li><!--
-                --><li><a href="gestion.html">Gestion du Compte</a></li><!--
-                --><li><a href="ajout.html">Ajout d'étudiant</a></li>
-                </ul>
-            </nav>
-            <div>
+            <div class="menu">
+                <nav>
+                    <a href="index.html">Accueil</a>
+                    <a href="game.html" class="selected">Jeu</a>
+                    <a href="gestion.html">Gestion du Compte</a>
+                    <a href="ajout.html">Ajout d'étudiant</a>
+                </nav>
                 <button class="button">Déconnexion</button>
             </div>
         </header>
