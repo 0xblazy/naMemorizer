@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>naMemorizer - Ajout d'étudiant</title>
+        <title>naMemorizer - Jeu</title>
         <meta charset="utf-8"/>
         <link rel="icon" type="image/png" href="img/favicon.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
@@ -29,9 +29,9 @@
             <nav>
                 <ul class="menu"><!--
                 --><li><a href="index.html">Accueil</a></li><!--
-                --><li><a href="game.html">Jeu</a></li><!--
+                --><li class="selected"><a href="game.html">Jeu</a></li><!--
                 --><li><a href="gestion.html">Gestion du Compte</a></li><!--
-                --><li class="selected"><a href="ajout.html">Ajout d'étudiant</a></li>
+                --><li><a href="ajout.html">Ajout d'étudiant</a></li>
                 </ul>
             </nav>
             <div>
@@ -40,24 +40,16 @@
         </header>
         <div class="contenu">
             <div>
-                <form action="" method="post">
-                    <h2>Ajout d'un étudiant</h2>
-                    <p>
-                        <label for="name">Nom :</label>
-                        <input type="text" name="name" id="name" required/>
+                <div class="game">
+                    <h2>Partie terminée</h2>
+                    <p class="score">
+                        Score : <span>9/10</span>
                     </p>
                     <p>
-                        <label for="firstname">Prénom :</label>
-                        <input type="text" name="firstname" id="firstname" required/>
+                        Vous pouvez relancer une partie si vous souhaitez améliorer votre score ou continuer à mémoriser les noms de vous élèves
                     </p>
-                    <p class="imageupload">
-                        <input type="file" accept="image/jpeg, image/png" name="image" id="image" onchange="readUrl(this)"/>
-                        <label for="image">
-                            <img id="imageshow" src="#" alt="Cliquez ici pour ajouter la photo de l'étudiant"/>
-                        </label>
-                    </p>
-                    <button type="submit" class="button">Ajouter</button>
-                </form>
+                    <button class="button next">Nouvelle partie</button>
+                </div>
             </div>
         </div>
         <footer>

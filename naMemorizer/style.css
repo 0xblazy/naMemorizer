@@ -259,18 +259,6 @@ div.button, .contenu div.button {
     transform: scaleX(1);
 }
 
-.delete {
-    background: rgb(228, 48, 64) !important;
-}
-
-.delete:hover {
-    color: rgb(147, 154, 144) !important;
-}
-
-.delete:before {
-    background: rgb(147, 154, 144) !important;
-}
-
 /* Contenu */
 .contenu {
     display: flex;
@@ -347,6 +335,73 @@ p.amusez_vous {
     font-size: 14pt;
 }
 
+/* Page de Jeu */
+.contenu .game {
+    flex-grow: 0;
+
+    max-width: 600px;
+
+    background: rgb(212, 212, 212);
+}
+
+.game div {
+    display: flex;
+    flex-direction: row;
+
+    background: none;
+}
+
+.game img {
+    padding: 6px;
+
+    object-fit: cover;
+
+    width: 252px;
+    height: 332px;
+    border-radius: 3px 6px;
+
+    background: rgb(246, 246, 246);
+}
+
+.game div .button:before {
+    height: 0px;
+}
+
+.game div .button.next:before {
+    height: 3px;
+}
+
+.game div .button:first-of-type {
+    margin-right: 12px;
+}
+
+.game div .button.true {
+    background: rgb(68, 208, 64)
+}
+
+.game div .button.false {
+    background: rgb(228, 48, 64);
+}
+
+.game div .button:disabled {
+    cursor: default;
+}
+
+.game div .button:hover:disabled {
+    color: rgb(246, 246, 246);
+
+    transform: translateY(0);
+}
+
+.game .score {
+    font-family: Roboto Medium Regular, sans-serif;
+    font-size: 16pt;
+}
+
+.game .score span {
+    font-family: Roboto Bold, sans-serif;
+}
+
 /* Formulaires */
 .contenu form {
     display: flex;
@@ -406,20 +461,22 @@ p.amusez_vous {
     display: block;
 }
 
-.imageupload img,  .imageupload img[alt] {
-    display: block;
+.imageupload img {
+    display: table-cell;
 
-    width: 240px;
-    height: 320px;
+    object-fit: cover;
+
+    width: 252px;
+    height: 332px;
     border-radius: 3px 6px;
+
+    vertical-align: middle;
+
+    padding: 6px;
 
     background: rgb(246, 246, 246);
 
     transition: box-shadow .5s;
-}
-
-.imageupload img[alt] {
-    padding: 6px;
 }
 
 .imageupload img:hover {
@@ -435,6 +492,18 @@ div.gestion {
 
     max-width: 800px;
     min-height: 620px;
+}
+
+.button.delete {
+    background: rgb(228, 48, 64);
+}
+
+.button.delete:hover {
+    color: rgb(147, 154, 144);
+}
+
+.button.delete:before {
+    background: rgb(147, 154, 144);
 }
 
 /* Pied de page */
@@ -462,6 +531,10 @@ footer p {
     font-family: Roboto Regular, sans-serif;
     font-size: 11pt;
     color: rgb(32, 32, 32);
+}
+
+footer div:first-of-type {
+    max-width: 622px;
 }
 
 footer img {

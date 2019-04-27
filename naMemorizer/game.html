@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>naMemorizer - Ajout d'étudiant</title>
+        <title>naMemorizer - Jeu</title>
         <meta charset="utf-8"/>
         <link rel="icon" type="image/png" href="img/favicon.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
@@ -29,9 +29,9 @@
             <nav>
                 <ul class="menu"><!--
                 --><li><a href="index.html">Accueil</a></li><!--
-                --><li><a href="game.html">Jeu</a></li><!--
+                --><li class="selected"><a href="game.html">Jeu</a></li><!--
                 --><li><a href="gestion.html">Gestion du Compte</a></li><!--
-                --><li class="selected"><a href="ajout.html">Ajout d'étudiant</a></li>
+                --><li><a href="ajout.html">Ajout d'étudiant</a></li>
                 </ul>
             </nav>
             <div>
@@ -40,24 +40,18 @@
         </header>
         <div class="contenu">
             <div>
-                <form action="" method="post">
-                    <h2>Ajout d'un étudiant</h2>
+                <div class="game">
+                    <h2>Question 1/10</h2>
                     <p>
-                        <label for="name">Nom :</label>
-                        <input type="text" name="name" id="name" required/>
+                        Choisissez le nom associé à la photo
                     </p>
-                    <p>
-                        <label for="firstname">Prénom :</label>
-                        <input type="text" name="firstname" id="firstname" required/>
-                    </p>
-                    <p class="imageupload">
-                        <input type="file" accept="image/jpeg, image/png" name="image" id="image" onchange="readUrl(this)"/>
-                        <label for="image">
-                            <img id="imageshow" src="#" alt="Cliquez ici pour ajouter la photo de l'étudiant"/>
-                        </label>
-                    </p>
-                    <button type="submit" class="button">Ajouter</button>
-                </form>
+                    <img src="photos/carbonni1u.jpg" alt="carbonni1u"/>
+                    <div>
+                        <button class="button true" disabled>Nicolas CARBONNIER</button>
+                        <button class="button" disabled>Nathan MINGER</button>
+                    </div>
+                    <button class="button next">Suivant</button>
+                </div>
             </div>
         </div>
         <footer>
