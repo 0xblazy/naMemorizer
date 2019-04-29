@@ -24,6 +24,8 @@ body {
     height: 100%;
 
     background: rgb(246, 246, 246);
+
+    transition: padding .5s;
 }
 
 header {
@@ -38,6 +40,8 @@ header {
     border-radius: 6px 12px;
 
     background: rgb(212, 212, 212);
+
+    transition: margin .5s, padding .5s, border-radius .5s;
 }
 
 input {
@@ -74,12 +78,15 @@ input:hover {
 .header-img {
     border-radius: 4px 8px;
 
+    padding: 12px;
+
     background: rgb(147, 154, 144);
+
+    transition: margin .5s;
 }
 
 .header-img img {
     display: block;
-    margin: 12px;
 }
 
 /* Menu */
@@ -94,12 +101,14 @@ input:hover {
 .menu nav {
     display: flex;
 
-    margin-left: 22px;
+    margin-left: 24px;
 
     height: 64px;
 
     font-size: 18pt;
     font-family: Product Sans Medium Regular;
+
+    transition: height .5s;
 }
 
 .menu a {
@@ -119,6 +128,14 @@ input:hover {
     background: rgb(147, 154, 144);
 
     transition: all .5s;
+}
+
+.menu a:first-of-type {
+    margin-left: 0;
+}
+
+.menu a:last-of-type {
+    margin-right: 0;
 }
 
 .menu a:before {
@@ -282,6 +299,8 @@ div.button, .contenu div.button {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 
     background: rgb(212, 212, 212);
+
+    transition: margin .5s, padding .5s, border-radius .5s, box-shadow .5s;
 }
 
 .contenu div {
@@ -520,6 +539,8 @@ footer {
     border-radius: 6px 12px 0px 0px;
 
     background: rgb(212, 212, 212);
+
+    transition: margin .5s, padding .5s, border-radius .5s;
 }
 
 footer p {
@@ -569,6 +590,10 @@ footer img {
     .menu nav {
         font-size: 16pt;
     }
+
+    .menu a {
+        padding: 0 15px;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -584,7 +609,6 @@ footer img {
     }
 
     .menu {
-        align-items: stretch;
         justify-content: stretch;
     }
 
@@ -601,16 +625,18 @@ footer img {
     .menu a {
         flex-grow: 1;
 
-        margin: 0 1px;
+        margin: 0 0 0 1px;
 
         border-radius: 0;
     }
 
-    .menu a:first-of-type {
-        margin-left: 0;
+    .menu a:last-of-type {
+        margin-right: 1px;
     }
 
     .menu button.button {
+        line-height: 64px;
+        
         font-size: 14pt;
 
         border-radius: 0;
@@ -629,7 +655,7 @@ footer img {
         box-shadow: none;
     }
 
-    .contenu div {
+    .contenu>div {
         border-radius: 0;
     }
 
@@ -637,5 +663,55 @@ footer img {
         margin: 0;
 
         border-radius: 0;
+    }
+}
+
+@media all and (max-width: 655px) {
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu nav {
+        flex-direction: column;
+
+        margin-right: 0;
+
+        height: auto;
+    }
+
+    .menu a {
+        margin: 0 0 1px 0;
+    }
+
+    .menu a:hover {
+        transform: translateY(0);
+    }
+
+    .menu button.button {
+        transform: translateY(0);
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 382px) {
+    header {
+        padding-top: 0;
+    }
+
+    .header-img {
+        width: 100%;
+
+        margin-bottom: 1px;
+
+        border-radius: 0;
+    }
+
+    .header-img img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
