@@ -44,7 +44,7 @@ header {
     transition: margin .5s, padding .5s, border-radius .5s;
 }
 
-input {
+input, select {
     padding: 6px;
     margin: 6px;
 
@@ -70,8 +70,37 @@ input::placeholder {
     transition: all .5s;
 }
 
-input:hover {
+input:hover, select:hover {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: 6px;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #444; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
 }
 
 /* Logo du site */
@@ -101,7 +130,7 @@ input:hover {
 .menu nav {
     display: flex;
 
-    margin-left: 24px;
+    margin-left: 22px;
 
     height: 64px;
 
@@ -113,7 +142,7 @@ input:hover {
 
 .menu a {
     margin: 0 3px;
-    padding: 0 20px;
+    padding: 0 15px;
 
     line-height: 64px;
     text-decoration: none;
@@ -424,7 +453,7 @@ p.amusez_vous {
 }
 
 /* Formulaires */
-.contenu form {
+.contenu form, div.classlist {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -442,8 +471,25 @@ p.amusez_vous {
     align-self: center;
 }
 
-.contenu form p {
+.contenu form p, .contenu form div, .classlist div {
     padding: 6px 0;
+}
+
+.contenu form div, .classlist div {
+    display: inline-block;
+
+    padding: 6px 0;
+
+    text-align: center;
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12pt;
+    color: rgb(32, 32, 32);
+
+    background: none;
+}
+
+.contenu form div.select {
+    padding: 0;
 }
 
 .contenu form p:last-of-type {
@@ -454,7 +500,7 @@ p.amusez_vous {
     padding: 0 6px;
 }
 
-.contenu input {
+.contenu form input, .contenu form select {
     margin: 0;
 }
 
@@ -505,13 +551,15 @@ p.amusez_vous {
 }
 
 /* Page de gestion */
-div.gestion {
+div.multiple_form {
     flex-direction: row;
     justify-content: space-evenly;
     align-content: space-between;
     flex-wrap: wrap;
 
-    max-width: 800px;
+    padding: 0;
+
+    width: 800px;
     min-height: 620px;
 }
 
@@ -525,6 +573,89 @@ div.gestion {
 
 .button.delete:before {
     background: rgb(147, 154, 144);
+}
+
+/* Page des Classes */
+div.classes {
+    min-height: 1025px;
+}
+
+p.select_classes {
+    align-self: center;
+}
+
+.select_classes select {
+    width: 256px;
+}
+
+.multiple_form>div {
+    justify-content: space-evenly;
+    flex-grow: 0;
+
+    height: 600px;
+}
+
+.multiple_form div.classlist {
+    align-items: center;
+
+    height: auto;
+    max-width: none;
+}
+
+.classlist .select select {
+    margin: 0;
+}
+
+.classlist table {
+    border-collapse: collapse;
+
+    height: 286px;
+
+    text-align: center;
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12pt;
+    color: rgb(32, 32, 32);
+
+    border-radius: 3px 6px;
+    overflow: hidden;
+
+    background: rgb(246, 246, 246);
+}
+
+.classlist th, .classlist td {
+    width: 120px;
+}
+
+.classlist thead {
+    display: block;
+
+    color: rgb(246, 246, 246);
+
+    background: rgb(147, 154, 144);
+}
+
+.classlist th {
+    padding: 6px;
+}
+
+.classlist tbody {
+    display: block;
+
+    max-height: 256px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.classlist td {
+    padding: 6px;
+}
+
+.classlist img {
+    display: block;
+
+    margin: 0 auto;
+
+    height: 64px;
 }
 
 /* Pied de page */
