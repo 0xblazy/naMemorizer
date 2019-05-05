@@ -540,12 +540,41 @@ div.classes {
     min-height: 1025px;
 }
 
-p.select_classes {
+.select_classes {
     align-self: center;
+
+    margin-bottom: 12px;
+    padding: 6px !important;
+
+    width: 256px;
+    height: 78px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    border-radius: 3px 6px;
+
+    background: rgb(246, 246, 246) !important;
+
+    transition: all .5s;
 }
 
-.select_classes select {
-    width: 256px;
+.select_classes p {
+    padding: 0 !important;
+
+    text-align: left;
+}
+
+.select_classes:hover {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+
+.select_classes input[type="checkbox"] {
+    width: auto;
+}
+
+.select_classes input[type="checkbox"]:hover {
+    box-shadow: none;
 }
 
 .multiple_form>div {
@@ -555,11 +584,19 @@ p.select_classes {
     height: 600px;
 }
 
+.multiple_form>div form div {
+    padding-bottom: 12px;
+}
+
 .multiple_form div.classlist {
     align-items: center;
 
     height: auto;
     max-width: none;
+}
+
+.one_form {
+    height: auto !important;
 }
 
 .classlist .select select {
@@ -857,6 +894,10 @@ footer img {
 
     .multiple_form>div {
         height: auto;
+    }
+
+    .one_form {
+        padding-top: 0 !important;
     }
 
     footer {
